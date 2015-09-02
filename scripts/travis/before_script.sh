@@ -14,12 +14,6 @@ tar -zxf master.tar.gz
 rm master.tar.gz
 mv mediawiki-master wiki
 
-echo "Part 1: I am in directory:"
-pwd
-
-echo "Part 1: What is in the directory?"
-ls -l
-
 cd wiki
 
 if [ $DBTYPE == "mysql" ]
@@ -35,12 +29,6 @@ echo 'ini_set("display_errors", 1);' >> LocalSettings.php
 echo '$wgShowExceptionDetails = true;' >> LocalSettings.php
 echo '$wgDevelopmentWarnings = true;' >> LocalSettings.php
 echo '$wgLanguageCode = "en";' >> LocalSettings.php
-
-echo "Part 2: I am in directory:"
-pwd
-
-echo "Part 2: What is in the directory?"
-ls -l
 
 cp -av ${originalDirectory}/Memento extensions
 
