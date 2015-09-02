@@ -34,6 +34,8 @@ cp -av ${originalDirectory}/Memento extensions
 
 echo 'require_once( "$IP/extensions/Memento/Memento.php" );' >> LocalSettings.php
 
+php maintenance/importDump.php < ${originalDirectory}/tests/data/demo-wiki-data/Kevan_Lannister.xml
+
 php maintenance/update.php --quick
 
 cp -av ${originalDirectory}/../wiki ${originalDirectory}/web
