@@ -1,7 +1,6 @@
 language: php
 
 matrix:
-  fast_finish: true
   include:
     - env: DBTYPE=mysql
       php: 5.3
