@@ -35,3 +35,5 @@ cp -av ${originalDirectory}/Memento extensions
 echo 'require_once( "$IP/extensions/Memento/Memento.php" );' >> LocalSettings.php
 
 php maintenance/update.php --quick
+
+cp -av ${originalDirectory}/wiki ${originalDirectory}/web
