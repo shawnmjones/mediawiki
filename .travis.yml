@@ -1,0 +1,26 @@
+language: php
+
+matrix:
+  fast_finish: true
+  include:
+    - env: DBTYPE=mysql
+      php: 5.3
+    - env: DBTYPE=sqlite
+      php: 5.3
+    - env: DBTYPE=mysql
+      php: 5.5
+    - env: DBTYPE=sqlite
+      php: 5.5
+    - env: DBTYPE=mysql
+      php: hhvm
+    - env: DBTYPE=sqlite
+      php: hhvm
+
+before_script:
+  - bash ./scripts/travis/before_script.sh
+
+script:
+  - bash ./scripts/travis/script.sh
+
+after_success:
+  - bash ./scripts/travis/after_script.sh
