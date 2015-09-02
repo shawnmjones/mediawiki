@@ -94,6 +94,7 @@ class MementoTest extends PHPUnit_Framework_TestCase {
 		$this->StandardEntityTests($entity, $URIG);
 
 		if ($entity) {
+			print_r($entity);
 		    $this->fail("302 response should not contain entity for URI $URIG");
 		}
 
