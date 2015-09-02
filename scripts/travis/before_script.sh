@@ -36,4 +36,4 @@ echo 'require_once( "$IP/extensions/Memento/Memento.php" );' >> LocalSettings.ph
 
 php maintenance/update.php --quick
 
-cp -av ${originalDirectory}/wiki ${originalDirectory}/web
+cp -av ${originalDirectory}/../wiki ${originalDirectory}/web
