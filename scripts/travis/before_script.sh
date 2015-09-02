@@ -36,6 +36,8 @@ echo 'require_once( "$IP/extensions/Memento/Memento.php" );' >> LocalSettings.ph
 
 php maintenance/importDump.php < ${originalDirectory}/tests/data/demo-wiki-data/Kevan_Lannister.xml
 
+php maintenance/rebuildrecentchanges.php
+
 php maintenance/update.php --quick
 
 cp -av ${originalDirectory}/../wiki ${originalDirectory}/web
