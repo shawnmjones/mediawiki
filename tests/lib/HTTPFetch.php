@@ -20,6 +20,7 @@ function extractHeadersFromResponse($response) {
         }
     
         if (strpos($line, "HTTP") !== false) {
+			echo "found first line\n";
             list($version, $code, $message) = preg_split("/ /", $line);
         } else {
             if (strpos($line, ":") !== false) {
