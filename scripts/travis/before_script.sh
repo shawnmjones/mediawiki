@@ -27,7 +27,7 @@ php maintenance/install.php --dbtype $DBTYPE --dbuser root --dbname its_a_mw --d
 echo 'error_reporting(E_ALL| E_STRICT);' >> LocalSettings.php
 echo 'ini_set("display_errors", 1);' >> LocalSettings.php
 echo '$wgShowExceptionDetails = true;' >> LocalSettings.php
-echo '$wgDevelopmentWarnings = true;' >> LocalSettings.php
+# echo '$wgDevelopmentWarnings = true;' >> LocalSettings.php
 echo '$wgLanguageCode = "en";' >> LocalSettings.php
 
 cp -av ${originalDirectory}/Memento extensions
