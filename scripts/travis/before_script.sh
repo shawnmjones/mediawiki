@@ -42,7 +42,7 @@ pwd
 echo "Part 2: What is in the directory?"
 ls -l
 
-cp -av ${originalDirectory}/mediawiki/Memento extensions
+cp -av ${originalDirectory}/Memento extensions
 
 echo 'require_once( "$IP/extensions/Memento/Memento.php" );' >> LocalSettings.php
 
