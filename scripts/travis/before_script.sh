@@ -27,7 +27,7 @@ if [ $DBTYPE == "mysql" ]
     mysql -e 'CREATE DATABASE its_a_mw;'
 fi
 
-composer install --no-dev
+#composer install --no-dev
 php maintenance/install.php --dbtype $DBTYPE --dbuser root --dbname its_a_mw --dbpath $(pwd) --pass nyan TravisWiki admin
 
 echo 'error_reporting(E_ALL| E_STRICT);' >> LocalSettings.php
